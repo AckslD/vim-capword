@@ -1,0 +1,61 @@
+*capword.txt* Capitalize start of current word in normal and insert mode
+         ▄▄▄▄▄▄▄ ▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄     ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄   ▄▄▄▄▄▄  ~
+        █       █      █       █ █ ▄ █ █       █   ▄  █ █      █ ~
+        █       █  ▄   █    ▄  █ ██ ██ █   ▄   █  █ █ █ █  ▄    █~
+        █     ▄▄█ █▄█  █   █▄█ █       █  █ █  █   █▄▄█▄█ █ █   █~
+        █    █  █      █    ▄▄▄█       █  █▄█  █    ▄▄  █ █▄█   █~
+        █    █▄▄█  ▄   █   █   █   ▄   █       █   █  █ █       █~
+        █▄▄▄▄▄▄▄█▄█ █▄▄█▄▄▄█   █▄▄█ █▄▄█▄▄▄▄▄▄▄█▄▄▄█  █▄█▄▄▄▄▄▄█ ~
+        capitalize or uncapitalize start of current word under cursor
+                 without leaving the current position
+
+
+INTRODUCTION                              *capword-introduction*
+
+USAGE                                     *capword-usage*
+In normal or insert mode, press `alt-k` to capitalize first letter in the
+current word under the cursor and `alt-j` to decapitalize.
+The current cursor position will be left unchanged.
+
+MAPPINGS                                  *capword-mappings*
+
+    * <m-k>: Captialize first letter of current word (normal and insert)
+    * <m-j>: Uncaptialize first letter of current word (normal and insert)
+
+CONFIGURATION                             *capword-configuration*
+By default the mappings for capitalizing and uncapitalizing are `alt-k` (`m-k`)
+and `alt-j` (`m-j`) respectively in both normal and insert mode.
+To change the mappings you can set the following variables in your vimrc:
+>
+    let g:capword_normal_lower_mapping = "<m-j>"
+    let g:capword_normal_upper_mapping = "<m-k>"
+    let g:capword_insert_lower_mapping = "<m-j>"
+    let g:capword_insert_upper_mapping = "<m-k>"
+<
+
+You can also turn of any mappings by setting `g:capword_no_mappings` or
+`g:capword_no_insert_mappings`.
+
+COMMANDS                                  *capword-commands*
+
+    * `CapwordUpper`: Capitalize first letter of current word (normal)
+    * `CapwordLower`: Uncapitalize first letter of current word (normal
+
+FUNCTIONS                                 *capword-functions*
+
+    * `capword#capitalize(mode, upper)`: 
+      Capitalize the start of the word under the cursor
+      `mode` should be 'n' or 'v' indicating the current mode
+      `upper` should be 1 (make uppercase) or 0 (make lowecase)
+
+LICENSE                                   *capword-license*
+Copyright (c) Axel Dahlberg. Distributed under the same terms as Vim itself.
+See `:help license`.
+
+CONTRIBUTION                              *capword-contribution*
+
+For contribution, go to `https://github.com/AckslD/vim-capword`.
+
+CREDITS                                   *capword-credits*
+
+Author: Axel Dahlberg
