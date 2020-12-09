@@ -1,5 +1,5 @@
 " Capitalize the start of the word under the cursor
-" `mode` should be 'n' or 'v' indicating the current mode
+" `mode` should be 'n' or 'i' indicating the current mode
 " `upper` should be 1 (make uppercase) or 0 (make lowecase)
 function capword#capitalize(mode, upper)
     " Save unnamed register since we do a yank
